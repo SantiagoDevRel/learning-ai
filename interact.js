@@ -2,9 +2,8 @@ import "dotenv/config";
 import OpenAI from "openai"; 
 
 const apiKey= process.env.OPENAI_API_KEY;
-console.log('key',apiKey)
 
-if(apiKey){
+if(!apiKey){
     console.error("Missing OPEN AI KEY");
     process.exit;
 }
